@@ -1,42 +1,125 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* style.cssの内容をここに全てコピー＆ペースト */
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #1a1a2e;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.container {
+    width: 100%;
+    max-width: 400px;
+    background-color: #2a2a4a;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* ... 以下、前回のCSSコードを全て続ける ... */
+.app-header {
+    display: flex; /* アイコンとタイトルを横並びにする */
+    justify-content: space-between; /* 両端寄せ */
+    align-items: center; /* 垂直方向の中央寄せ */
+    margin-bottom: 30px; /* 下に余白 */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.header-title {
+    font-size: 1.2em; /* タイトルの文字サイズ */
+    font-weight: bold;
+    margin: 0; /* h1のデフォルトマージンを削除 */
+    color: #ffffff;
 }
 
-.card {
-  padding: 2em;
+.icon-button {
+    background: none; /* ボタンの背景色なし */
+    border: none; /* ボタンの枠線なし */
+    color: #ffffff; /* アイコンの色を白に */
+    font-size: 1.5em; /* アイコンのサイズ */
+    cursor: pointer; /* マウスカーソルをポインターにする */
+    padding: 5px; /* クリックしやすいようにパディングを追加 */
+    transition: transform 0.2s; /* ホバー時のアニメーション */
 }
 
-.read-the-docs {
-  color: #888;
+.icon-button:hover {
+    transform: scale(1.1); /* ホバーで少し拡大 */
+}
+
+/* style.css (上記に追加) */
+
+.date-display {
+    text-align: center; /* 日付を中央寄せ */
+    margin-bottom: 30px; /* 下に余白 */
+}
+
+.current-week {
+    font-size: 1.8em; /* 日付の文字サイズを大きく */
+    font-weight: bold;
+    margin: 0;
+    color: #ffffff;
+}
+
+/* style.css (上記に追加) */
+
+.filter-tabs {
+    display: flex; /* ボタンを横並びにする */
+    justify-content: space-around; /* 等間隔に配置 */
+    gap: 10px; /* ボタン間のスペース */
+    margin-bottom: 30px; /* 下に余白 */
+    background-color: #3a3a5a; /* タブコンテナの背景色（Figmaの画像と合わせる） */
+    border-radius: 25px; /* 角を丸くする */
+    padding: 5px; /* 内側の余白 */
+}
+
+.tab-button {
+    flex: 1; /* ボタンが等しい幅になるように */
+    background-color: transparent; /* デフォルトは透明 */
+    border: none; /* 枠線なし */
+    color: #ffffff; /* テキスト色を白に */
+    padding: 10px 15px; /* 内側の余白 */
+    border-radius: 20px; /* 角を丸くする */
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s; /* ホバー/アクティブ時のアニメーション */
+}
+
+.tab-button.active {
+    background-color: #ffffff; /* 選択されているタブの背景色を白に */
+    color: #1a1a2e; /* 選択されているタブのテキスト色を暗く */
+}
+
+.tab-button:hover:not(.active) {
+    background-color: rgba(255, 255, 255, 0.1); /* ホバー時の背景色を少し明るく */
+}
+
+/* style.css (上記に追加) */
+
+.image-grid {
+    display: grid; /* グリッドレイアウトを使用 */
+    grid-template-columns: repeat(2, 1fr); /* 2列で表示、各列は等しい幅 */
+    gap: 15px; /* 画像間のスペース */
+    justify-items: center; /* グリッドアイテムを中央揃え */
+}
+
+.image-card {
+    width: 100%; /* カードの幅を親要素に合わせる */
+    overflow: hidden; /* 画像がはみ出さないように */
+    border-radius: 15px; /* カードの角を丸くする */
+    background-color: #3a3a5a; /* カードの背景色（任意） */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* カードに影を追加 */
+}
+
+.image-card img {
+    width: 100%; /* 画像をカードの幅に合わせる */
+    height: 180px; /* 画像の高さ固定（Figmaの画像に合わせて調整） */
+    object-fit: cover; /* 画像がアスペクト比を保ちつつ、指定された領域を埋めるように調整 */
+    display: block; /* 画像の下に余計なスペースができないように */
+    border-radius: 15px; /* 画像の角も丸くする */
 }

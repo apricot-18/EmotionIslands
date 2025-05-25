@@ -1,35 +1,59 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react'; // Reactをインポート
+import './App.css'; // App.cssをインポートしてスタイルを適用
 
+// Appコンポーネントを定義
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+    <div className="container">
+      {/* ヘッダー部分 */}
+      <header className="app-header">
+        <button className="icon-button left-icon">
+          <span className="material-icons-outlined">book</span>
         </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+        <h1 className="header-title">Weekly Report</h1>
+        <button className="icon-button right-icon">
+          <span className="material-icons-outlined">close</span>
+        </button>
+      </header>
+
+      {/* 日付表示部分 */}
+      <section className="date-display">
+        <p className="current-week">5/21 - 5/27</p>
+      </section>
+
+      {/* フィルタリングタブ部分 */}
+      <nav className="filter-tabs">
+        <button className="tab-button active">All</button>
+        <button className="tab-button">気候帯</button>
+        <button className="tab-button">時間帯</button>
+      </nav>
+
+      {/* 画像グリッド部分 */}
+      <main className="image-grid">
+        <div className="image-card">
+          <img src="https://via.placeholder.com/150" alt="Image 1" /> {/* 仮の画像URL */}
+        </div>
+        <div className="image-card">
+          <img src="https://via.placeholder.com/150" alt="Image 2" />
+        </div>
+        <div className="image-card">
+          <img src="https://via.placeholder.com/150" alt="Image 3" />
+        </div>
+        <div className="image-card">
+          <img src="https://via.placeholder.com/150" alt="Image 4" />
+        </div>
+        <div className="image-card">
+          <img src="https://via.placeholder.com/150" alt="Image 5" />
+        </div>
+        <div className="image-card">
+          <img src="https://via.placeholder.com/150" alt="Image 6" />
+        </div>
+        <div className="image-card">
+          <img src="https://via.placeholder.com/150" alt="Image 7" />
+        </div>
+      </main>
+    </div>
+  );
 }
 
-export default App
+export default App; // Appコンポーネントをエクスポート
