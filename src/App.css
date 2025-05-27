@@ -109,17 +109,17 @@ body {
 }
 
 .image-card {
-    width: 100%; /* カードの幅を親要素に合わせる */
-    overflow: hidden; /* 画像がはみ出さないように */
-    border-radius: 15px; /* カードの角を丸くする */
-    background-color: #3a3a5a; /* カードの背景色（任意） */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* カードに影を追加 */
+    width: 100%;
+    overflow: hidden;
+    border-radius: 15px;
+    background-color: #3a3a5a;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 0.5rem; /* 8px */
 }
-
 .image-card img {
-    width: 100%; /* 画像をカードの幅に合わせる */
-    height: 180px; /* 画像の高さ固定（Figmaの画像に合わせて調整） */
-    object-fit: cover; /* 画像がアスペクト比を保ちつつ、指定された領域を埋めるように調整 */
-    display: block; /* 画像の下に余計なスペースができないように */
-    border-radius: 15px; /* 画像の角も丸くする */
+    width: 100%;
+    height: 180px; /* 画像の高さを固定 */
+    object-fit: cover; /* アスペクト比を保ちつつ、指定された領域を埋める */
+    display: block;
+    border-radius: 10px; /* 画像自体の角も丸く */
 }
